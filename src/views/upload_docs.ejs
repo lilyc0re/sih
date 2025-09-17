@@ -1,0 +1,15 @@
+<section>
+  <h2>Upload Documents (CSV)</h2>
+  <form method="post" action="/upload-docs" enctype="multipart/form-data" class="form">
+    <label>Select CSV:</label>
+    <input type="file" name="file" accept=".csv,text/csv" required />
+    <button type="submit">Upload & Run Pipeline</button>
+  </form>
+  <% if (error) { %>
+    <div class="error"><%= error %></div>
+  <% } %>
+  <div style="margin-top:12px">
+    <code>Authorization: Bearer &lt;token from cookie&gt;</code>
+  </div>
+</section>
+

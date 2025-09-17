@@ -1,0 +1,12 @@
+<section>
+  <h2>My Comments</h2>
+  <div class="history">
+    <% comments.forEach(c => { %>
+      <div class="history-item">
+        <div><%= c.comment %></div>
+        <div class="meta"><%= c.name || user.name %> • <%= c.date.toDateString() %></div>
+      </div>
+    <% }) %>
+  </div>
+</section>
+

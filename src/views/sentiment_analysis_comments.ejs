@@ -1,0 +1,20 @@
+<section>
+  <h2>Sentiment Analysis - Comments</h2>
+  <form method="post" action="/sentiment-analysis-comments" class="form">
+    <label>Paste comments (one per line):</label>
+    <textarea name="comments" rows="6" placeholder="The new UI is fantastic, really smooth to use!&#10;Shipping was delayed by two weeks, very frustrating."></textarea>
+    <button type="submit">Analyze</button>
+  </form>
+  <% if (result) { %>
+    <h3>Results</h3>
+    <div>
+      <% result.forEach(r => { %>
+        <div class="history-item">
+          <div><strong>#<%= r.commentId %></strong> <%= r.comment %></div>
+          <div class="meta">sentiment: <%= r.sentiment %> • confidence: <%= r.confidence %></div>
+        </div>
+      <% }) %>
+    </div>
+  <% } %>
+</section>
+

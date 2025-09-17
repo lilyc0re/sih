@@ -1,0 +1,21 @@
+<section>
+  <h2>Upload a Comment</h2>
+  <form method="post" action="/upload-comment" class="form">
+    <label>Article name :</label>
+    <select name="articleId">
+      <option value="a1">Pay and View MTNL Landline Bills, Delhi</option>
+      <option value="a2">Search Electronic Indian Postal Order details online</option>
+    </select>
+    <label>Your name (optional):</label>
+    <input name="name" />
+    <label>Category/Tag :</label>
+    <input name="category" />
+    <label>Your Comment :</label>
+    <textarea name="comment"></textarea>
+    <button type="submit">Submit</button>
+  </form>
+  <% if (submitted) { %>
+  <div class="success-box">Comment Successfully Submitted!</div>
+  <% } %>
+</section>
+
